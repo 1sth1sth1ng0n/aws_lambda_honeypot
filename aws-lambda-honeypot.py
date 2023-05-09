@@ -10,7 +10,7 @@ from random import randint
 #   to devices defined in a lost/stolen pre-stage scope.
 #
 
-jamf_hostname = 'https://jamf-server.com:8443'
+jamf_hostname = 'https://jamf-server.com'
 secret_manager_arn = "arn:aws:secretsmanager:[ARN]]"
 client = boto3.client("secretsmanager")
 response = client.get_secret_value(SecretId = (secret_manager_arn))
