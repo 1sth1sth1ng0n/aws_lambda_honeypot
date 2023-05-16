@@ -85,7 +85,7 @@ def lambda_handler(event, context):
                         if mdm_command_response.status_code == 200:
                             """ create dict from json response"""
                             command_data = json.loads(mdm_command_response.content.decode('utf-8')) 
-                            print(f'{command_data}]')
+                            print(f'{command_data}')
 
                             slack_webhook = "https://hooks.slack.com/services/[WEBHOOK]"
                             slack_payload = f'{"text":"[LOST-OR-STOLEN-DEVICE] *{serial_number}* was just MDM locked with Pin Code: {mdm_lock_pin}. Go check it out!"}'
